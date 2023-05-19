@@ -4,28 +4,17 @@
     <div class="flex h-full flex-1 flex-nowrap text-base font-light">
       <div class="relative flex h-full flex-1 items-center pr-3">
         <label class="absolute -top-10 left-0">Role</label>
-        <input
-          v-model="role"
-          type="text"
-          placeholder="Software Engineer"
-          class="w-full text-lg font-normal focus:outline-none"
-        />
+        <text-input v-model="role" placeholder="Software Engineer" />
       </div>
 
       <span
         class="flex h-full items-center border-l border-r border-brand-gray-3 bg-brand-gray-2 px-3"
       >
-        in
       </span>
 
       <div class="relative flex h-full flex-1 items-center pl-3">
         <label class="absolute -top-10 left-0">Where?</label>
-        <input
-          v-model="location"
-          type="text"
-          placeholder="Los Angeles"
-          class="font- w-full text-lg font-normal focus:outline-none"
-        />
+        <text-input v-model="location" placeholder="Los Angeles" />
       </div>
     </div>
 

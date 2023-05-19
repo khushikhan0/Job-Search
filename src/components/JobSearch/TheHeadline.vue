@@ -1,7 +1,7 @@
 <template>
   <section class="mb-16">
     <h1 class="mb-14 text-8xl font-bold tracking-tighter">
-      <span :class="actionClasses">{{ action }}</span>
+      <span :class="actionClasses" class="align-center">{{ action }}</span>
       <br />
       for everyone
     </h1>
@@ -16,7 +16,7 @@ export default {
   name: 'TheHeadline',
   data() {
     return {
-      action: 'Build',
+      action: 'Reduce risk',
       interval: null
     }
   },
@@ -36,7 +36,12 @@ export default {
   methods: {
     changeTitle() {
       this.interval = setInterval(() => {
-        const actions = ['Build', 'Create', 'Design', 'Code']
+        const actions = [
+          'Reduce risk',
+          'Improve security',
+          'Lower costs',
+          'Accelerate transformation'
+        ]
         this.action = nextElementInList(actions, this.action)
       }, 3000)
     }
@@ -45,19 +50,19 @@ export default {
 </script>
 
 <style scoped>
-.build {
+.reduce {
   color: #1a73e8;
 }
 
-.create {
+.improve {
   color: #34a853;
 }
 
-.design {
+.lower {
   color: #f9ab00;
 }
 
-.code {
+.accelerate {
   color: #d93025;
 }
 </style>
